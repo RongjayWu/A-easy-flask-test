@@ -1,0 +1,22 @@
+{% extends 'base.html'%}
+
+{% block head%} {% endblock%}
+{% block body%} 
+    <nav class="navbar">
+        <ul>
+            <li><a href="/">首頁</a></li>
+        </ul>
+    </nav>
+        <hr>
+        <h2>Create A New Account:</h2>
+        <form action='/register' method='POST'>
+            Account: <input type='text' name='Account' id='Account' required minlength="8">
+            <br>
+            Password: <input type='password' name='Password' id='Password' required minlength="8">
+            <br>
+            Confirm Password: <input type='password' name='ConfirmPassword' id='ConfirmPassword' required>
+            <br>
+            <input type='submit' value='Register'>
+        </form>
+        <hr>
+{% endblock%}

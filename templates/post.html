@@ -1,0 +1,20 @@
+{% extends 'base.html'%}
+
+{% block head%} {% endblock%}
+{% block body%} 
+    <nav class="navbar">
+        <ul>
+            <li><a href="/index">返回個人頁面</a></li>
+        </ul>
+    </nav> 
+    <hr>
+        <h2>建立一則新的貼文</h2>
+        <form action='/index' method='POST'>
+            標題: <input type='text' name='title' id='title' required minlength="1">
+            <br>
+            內容: <input type='text' name='intro' id='intro'>
+            <br>
+            <input type='submit' value='建立'>
+        </form>
+        <hr>
+{% endblock%}

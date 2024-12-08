@@ -1,0 +1,20 @@
+{% extends 'base.html'%}
+
+{% block head%} {% endblock%}
+{% block body%} 
+    <nav class="navbar">
+        <ul>
+            <li><a href="/">首頁</a></li>
+        </ul>
+    </nav> 
+    <hr>
+        <h2>LOG IN:</h2>
+        <form action='/login' method='POST'>
+            Account: <input type='text' name='Account' id='Account' required minlength="8">
+            <br>
+            Password: <input type='password' name='Password' id='Password' required minlength="8">
+            <br>
+            <input type='submit' value='login'>
+        </form>
+        <hr>
+{% endblock%}

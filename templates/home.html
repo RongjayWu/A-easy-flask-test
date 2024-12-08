@@ -1,0 +1,33 @@
+{% extends 'base.html'%}
+
+{% block head%} {% endblock%}
+
+{% block body%} 
+    <nav class="navbar">
+        <ul>
+            <li><a href="/">首頁</a></li>
+            <li><a href="/login">登入</a></li>
+            <li><a href="/register">註冊</a></li>
+        </ul>
+    </nav>    
+
+
+    <div class="container">
+        <div class="card fade-in">
+          <h1>歡迎來到布告欄網站</h1>
+        </div>
+        
+        <div class="grid">
+            {% for post in posts %}
+                <div class="card">
+                    <h2>{{ post.title }}</h2>
+                    <p>{{ post.intro }}</p>
+                    <p>發文帳號：{{ post.posterAcc }}<p>
+                    <p>日期：{{ post.date_posted }}</p>
+                </div>
+            {% endfor%}
+        </div>
+    </div>
+        
+    
+{% endblock%}

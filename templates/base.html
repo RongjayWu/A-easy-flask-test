@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HW2-B11109041</title>
+        <style>
+            /* 重置默認樣式 */
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+    
+            body {
+                font-family: 'Microsoft JhengHei', Arial, sans-serif;
+                line-height: 1.6;
+                color: #333;
+                background-color: #f4f4f4;
+            }
+    
+            /* 導航欄樣式 */
+            .navbar {
+                background: linear-gradient(135deg, #6366f1, #4f46e5);
+                padding: 1rem;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+    
+            .navbar ul {
+                list-style: none;
+                display: flex;
+                justify-content: center;
+                gap: 2rem;
+            }
+    
+            .navbar a {
+                color: white;
+                text-decoration: none;
+                font-weight: bold;
+                transition: color 0.5s;
+            }
+    
+            .navbar a:hover {
+                color: #ffd700;
+            }
+    
+            /* 主要內容區域 */
+            .container {
+                max-width: 1200px;
+                margin: 2rem auto;
+                padding: 0 1rem;
+            }
+    
+            /* 卡片設計 */
+            .card {
+                background: white;
+                border-radius: 8px;
+                padding: 2rem;
+                margin-bottom: 2rem;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                transition: transform 0.3s ease;
+            }
+    
+            .card:hover {
+                transform: translateY(-10px);
+            }
+    
+            /* 按鈕樣式 */
+            .button {
+                display: inline-block;
+                padding: 0.8rem 1.5rem;
+                background: #4f46e5;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                transition: background 0.3s;
+            }
+    
+            .button:hover {
+                background: #6366f1;
+            }
+    
+            /* 響應式設計 */
+            @media (max-width: 768px) {
+                .navbar ul {
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 1rem;
+                }
+    
+                .card {
+                    padding: 1rem;
+                }
+            }
+    
+            /* 網格系統 */
+            .grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 2rem;
+                margin-top: 2rem;
+            }
+    
+            /* 動畫效果 */
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+    
+            .fade-in {
+                animation: fadeIn 1s ease-out;
+            }
+        </style>
+        {% block head%} {% endblock%}
+    </head>
+    <body>
+        {% block body%} {% endblock%}
+    </body>
+</html>

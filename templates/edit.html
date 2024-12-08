@@ -1,0 +1,21 @@
+{% extends 'base.html'%}
+
+{% block head%} {% endblock%}
+{% block body%} 
+    <nav class="navbar">
+        <ul>
+            <li><a href="/index">返回個人頁面</a></li>
+        </ul>
+    </nav> 
+    <hr>
+        <h2>編輯此則貼文</h2>
+        <form action='/posts/edit/{{post.id}}' method='POST'>
+            標題: <input type='text' name='title' id='title' required minlength="1" value='{{post.title}}'>
+            <br>
+            內容: <input type='text' name='intro' id='intro' value='{{post.intro}}'>
+            <br>
+            <input type='submit' value='保存修改'>
+        </form>
+
+    <hr>
+{% endblock%}
